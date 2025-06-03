@@ -296,7 +296,17 @@ OrderIterator Tests
     - Adds strings ("banana", "apple", "cherry")
     - Verifies side-cross order: {"apple", "cherry", "banana"}
 ---
-
+## demo_run example
+g++ -c -Wall -std=c++17 -g -IHPP/ demo.cpp -o OBJ/demo.o
+g++ -Wall -std=c++17 -g -o demo OBJ/demo.o
+./demo
+Size: 5, Elements: [7, 15, 6, 1, 2]
+Ascending order: 1 2 6 7 15 
+Descending order: 15 7 6 2 1 
+Side Cross order: 1 15 2 7 6 
+Reverse order: 2 1 6 15 7 
+Order order: 7 15 6 1 2 
+Middle Out order: 6 15 1 7 2 
 ## Memory Safety
 
 Run `make valgrind` to ensure no memory leaks exist. All dynamic allocations are properly managed.
